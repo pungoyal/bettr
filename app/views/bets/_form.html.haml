@@ -1,0 +1,16 @@
+= form_for @bet do |f|
+  -if @bet.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@bet.errors.count, "error")} prohibited this bet from being saved:"
+      %ul
+        - @bet.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :points
+    = f.text_field :points
+  .field
+    = f.label :success
+    = f.check_box :success
+  .actions
+    = f.submit 'Save'

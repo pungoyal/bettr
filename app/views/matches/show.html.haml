@@ -1,0 +1,10 @@
+%p
+  %b Date:
+  = @match.date
+%p
+  %b Description:
+  = @match.description
+
+= link_to 'Edit', edit_match_path(@match)
+\|
+= link_to 'Back', matches_path

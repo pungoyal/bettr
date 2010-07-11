@@ -1,7 +1,21 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
-#   Mayor.create(:name => 'Daley', :city => cities.first)
+home = Team.create! :name => 'Uruguay', :code => 'URU'
+away = Team.create! :name => 'North Korea', :code => 'KOR'
+date = DateTime.new 2010, 6, 26
+Match.create! :teams => [home, away], :date => date
+
+home = Team.create! :name => 'United States', :code => 'USA'
+away = Team.create! :name => 'Ghana', :code => 'GHA'
+date = DateTime.new 2010, 6, 26
+Match.create! :teams => [home, away], :date => date
+
+home = Team.create! :name => 'Argentina', :code => 'ARG'
+away = Team.create! :name => 'Mexico', :code => 'MEX'
+date = DateTime.new 2010, 6, 27
+Match.create! :teams => [home, away], :date => date
+
+home = Team.create! :name => 'Germany', :code => 'GER'
+away = Team.create! :name => 'England', :code => 'ENG'
+date = DateTime.new 2010, 6, 27
+Match.create! :teams => [home, away], :date => date
+
+###############################

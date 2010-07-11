@@ -1,0 +1,10 @@
+%p
+  %b Points:
+  = @bet.points
+%p
+  %b Success:
+  = @bet.success
+
+= link_to 'Edit', edit_bet_path(@bet)
+\|
+= link_to 'Back', bets_path
