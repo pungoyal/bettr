@@ -20,7 +20,7 @@ group :development do
 end
 group :test do
   gem "rspec"
-  gem "rspec-rails"
+  gem "rspec-rails", ">= 2.0.0.beta.13"
   gem "factory_girl"
 end
 group :production do
