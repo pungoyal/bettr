@@ -17,6 +17,7 @@ gem 'authlogic'
 
 group :development do
   gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'rails3-generators'
 end
 group :test do
   gem "rspec"

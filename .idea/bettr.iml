@@ -183,6 +183,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v0.9.26, /Users/pgoyal/.rvm/gems/ruby-1.9.2-preview3/gems/bundler-0.9.26)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.0.beta4, /Users/pgoyal/.rvm/gems/ruby-1.9.2-preview3/gems/rails-3.0.0.beta4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v3.0.0.beta4, /Users/pgoyal/.rvm/gems/ruby-1.9.2-preview3/gems/activerecord-3.0.0.beta4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rails3-generators (v0.10.1, /Users/pgoyal/.rvm/gems/ruby-1.9.2-preview3/gems/rails3-generators-0.10.1)" level="application" />
   </component>
 </module>
 
