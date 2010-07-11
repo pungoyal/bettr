@@ -15,10 +15,10 @@ rescue MissingSourceFile
 
 #{"*" * 80}
 *  You are trying to run an rspec rake task defined in
-*  #{__FILE__},
+*    #{__FILE__}  ,
 *  but rspec can not be found in vendor/gems, vendor/plugins or system gems.
-#{"*" * 80}
-MSG
+  #{"*" * 80}
+            MSG
           end
         end
       end
@@ -48,14 +48,14 @@ namespace :spec do
 
   task :statsetup do
     require 'rails/code_statistics'
-    ::STATS_DIRECTORIES << %w(Model\ specs spec/models) if File.exist?('spec/models')
-    ::STATS_DIRECTORIES << %w(View\ specs spec/views) if File.exist?('spec/views')
-    ::STATS_DIRECTORIES << %w(Controller\ specs spec/controllers) if File.exist?('spec/controllers')
-    ::STATS_DIRECTORIES << %w(Helper\ specs spec/helpers) if File.exist?('spec/helpers')
-    ::STATS_DIRECTORIES << %w(Library\ specs spec/lib) if File.exist?('spec/lib')
-    ::STATS_DIRECTORIES << %w(Mailer\ specs spec/mailers) if File.exist?('spec/mailers')
-    ::STATS_DIRECTORIES << %w(Routing\ specs spec/routing) if File.exist?('spec/routing')
-    ::STATS_DIRECTORIES << %w(Request\ specs spec/requests) if File.exist?('spec/requests')
+    ::STATS_DIRECTORIES << %w(  Model\ specs spec/models  ) if File.exist?('spec/models')
+    ::STATS_DIRECTORIES << %w(  View\ specs spec/views  ) if File.exist?('spec/views')
+    ::STATS_DIRECTORIES << %w(  Controller\ specs spec/controllers  ) if File.exist?('spec/controllers')
+    ::STATS_DIRECTORIES << %w(  Helper\ specs spec/helpers  ) if File.exist?('spec/helpers')
+    ::STATS_DIRECTORIES << %w(  Library\ specs spec/lib  ) if File.exist?('spec/lib')
+    ::STATS_DIRECTORIES << %w(  Mailer\ specs spec/mailers  ) if File.exist?('spec/mailers')
+    ::STATS_DIRECTORIES << %w(  Routing\ specs spec/routing  ) if File.exist?('spec/routing')
+    ::STATS_DIRECTORIES << %w(  Request\ specs spec/requests  ) if File.exist?('spec/requests')
     ::CodeStatistics::TEST_TYPES << "Model specs" if File.exist?('spec/models')
     ::CodeStatistics::TEST_TYPES << "View specs" if File.exist?('spec/views')
     ::CodeStatistics::TEST_TYPES << "Controller specs" if File.exist?('spec/controllers')
@@ -66,4 +66,3 @@ namespace :spec do
     ::CodeStatistics::TEST_TYPES << "Request specs" if File.exist?('spec/requests')
   end
 end
-

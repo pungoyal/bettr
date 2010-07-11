@@ -20,6 +20,7 @@ group :development do
   gem 'rails3-generators'
 end
 group :test do
+  gem "shoulda"
   gem "rspec"
   gem "rspec-rails", ">= 2.0.0.beta.13"
   gem "factory_girl"
