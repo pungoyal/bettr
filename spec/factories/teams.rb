@@ -1,6 +1,8 @@
-# Read about factories at http://github.com/thoughtbot/factory_girl
+Factory.sequence :code do |n|
+  "CO#{n}"
+end
 
-Factory.define :team do |f|
-  f.name "MyString"
-  f.code "MyString"
+Factory.define :team do |team|
+  team.name { 'Team' }
+  team.code { Factory.next :code }
 end

@@ -1,7 +1,14 @@
-# Read about factories at http://github.com/thoughtbot/factory_girl
+Factory.sequence :email do |n|
+  "user#{n}@example.com"
+end
 
-Factory.define :user do |f|
-  f.username "MyString"
-  f.email "MyString"
-  f.points 1
+Factory.sequence :username do |n|
+  "username#{n}"
+end
+
+Factory.define :user do |user|
+  user.username { Factory.next :username }
+  user.email { Factory.next :email }
+#  user.password { "password" }
+#  user.password_confirmation { "password" }
 end

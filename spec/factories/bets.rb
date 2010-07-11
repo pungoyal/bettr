@@ -1,6 +1,8 @@
-# Read about factories at http://github.com/thoughtbot/factory_girl
-
-Factory.define :bet do |f|
-  f.points 1
-  f.success false
+Factory.define :bet do |bet|
+  bet.association :user
+  bet.association :match
+  bet.points { 10 }
+  bet.after_build do |b|
+    b.team = b.match.teams[0]
+  end
 end

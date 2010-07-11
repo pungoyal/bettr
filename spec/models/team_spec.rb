@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Team do
-  before(:all) { Team.create! :code => 'BRA', :name => 'Brazil' }
+  before(:all) { @team = Factory(:team) }
 
   it { should validate_presence_of :code }
   it { should validate_uniqueness_of :code }
@@ -10,6 +10,8 @@ describe Team do
   it { should have_and_belong_to_many(:matches) }
 
   it "should generate path to the flag image" do
-    Team.first.flag_url.should == 'flags/BRA.png'
+    @team.flag_url.should == 'flags/' + @team.code + '.png'
   end
+
+  after(:all) { @team.destroy }
 end

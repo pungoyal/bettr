@@ -23,7 +23,7 @@ group :test do
   gem "shoulda"
   gem "rspec"
   gem "rspec-rails", ">= 2.0.0.beta.13"
-  gem "factory_girl"
+  gem "factory_girl_rails"
 end
 group :production do
   gem 'pg'
