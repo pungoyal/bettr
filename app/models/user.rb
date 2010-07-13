@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :bets
-  validates_uniqueness_of :email
+
+  validates :username, :presence => true, :uniqueness => true
+  validates :email, :presence => true, :uniqueness => true
 
   def placed_bets_points
     bets.sum :points
